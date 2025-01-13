@@ -1,0 +1,118 @@
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <meta name = viewport content="width= device- width, initial- scale= 1.0">
+        <title> Responsive Contact Us Page</title>
+        <link rel="stylesheet"href="style.css">
+      </head> 
+      <body>
+        <div class="contactUs">
+          <div class="title">
+            <h2>We Value Your Input </h2>
+          </div>
+          <div class="box">
+            <div class="contact form">
+            <h3> Send message </h3>
+            <form onsubmit="sendEmail(); reset(); return false; ">
+              <div class="formBox">
+                <div class="row50">
+                  <div class="InputBox">
+                    <span>First Name</span>
+                    <input type="text"  id="fname"placeholder="Stive">
+                  </div>
+                  <div class="InputBox">
+                    <span>Last Name</span>
+                    <input type="text" id="lname" placeholder="Adams">
+                  </div>
+                  </div>
+
+              <div class="row50">
+                <div class="InputBox">
+                  <span>Email</span>
+                  <input type="text" id="email" placeholder="stiveadams@gmail.com">
+                </div>
+                <div class="InputBox">
+                  <span>Mobile</span>
+                  <input type="text"  id= "number"placeholder="+27 063 168 0459">
+                </div>
+              </div>
+
+              <div class="row100">
+                <div class="InputBox">
+                  <span>Message</span>
+                  <textarea  id="message"   placeholder="Write your massege here..."></textarea>
+                </div>
+              </div>
+
+              <div class="row100">
+                <div class="InputBox">
+                  <input type="submit" value="Send">
+                  </div>
+              </div>
+              </div>
+            </form>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+             function sendEmail(){ 
+                Email.send({
+                        Host : "smtp.gmail.com",
+                        Username : "kuhleratazayo560@gmail.com",
+                        Password : "M@mp1nga",
+                        To : 'divergent630@gmail.com',
+                        From :document.getElementById("email").value,
+                        Subject : "New Contact Form Entry",
+                        Body : "First Name:" + document.getElementById("fname").value
+                        + "<br> Last Name:" + document.getElementById("lname").value
+                       + "<br> Email:" + document.getElementById("email").value
+                       + "<br> Mobile:" + document.getElementById("number").value
+                       + "<br> message:" + document.getElementById("message").value
+                    }).then(
+                      message => alert("Message sent successful")
+                    );
+              }
+            </script>
+            </div>
+            <div class="contact info">
+            <h3>Contact Info</h3>
+            <div class="InfoBox">
+              <div>
+                <span><ion-icon name="location-outline"></ion-icon></span>
+                <p>Divergent Hair and Nail<br>63 Western Road Central 6001</p>
+              </div>
+              <div>
+                <span><ion-icon name="mail"></ion-icon></span>
+                <a href="Divergent@gmail.com">Divergent@gmail.com</a>
+              </div>
+              <div>
+                <span><ion-icon name="call"></ion-icon></span>
+                <a herf="Tel:+27 43 168 0459">+27 43 168 0459</a>
+              </div>
+              <h3>Opening Hours </h3>
+              <div class = "opening-hours">
+                <p>Mon-Fri 8:00am- 18:00pm<br></p>
+                <p>Saturday 8:00am- 17:00pm<br></p>
+                <p>Sunday closed</p>
+                </div>
+              <ul class="sci">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              </ul>
+            </div>
+            </div>
+            <div class="contact map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.
+              089947326462!2d25.610920374864662!3d-33.964527524022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+              1!3m3!1m2!1s0x1e7ad25fd8908ba7%3A0xbdd5460b1bf367f0!2s63%20Western%20Rd%2C%20Ggeberha%20Central%2C%20Gqeberha%2C%206001
+              !5e0!3m2!1sen!2sza!4v1724239565942!5m2!1sen!2sza" style="border:0;" allowfullscreen="" loading="lazy"
+               referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              
+            </div>
+            </div>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+           
+            
+      </body> 
+    </html>
